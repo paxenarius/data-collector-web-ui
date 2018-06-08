@@ -11,6 +11,9 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
+  generate: {
+    fallback: true // if you want to use '404.html'
+  },
   mode: 'spa',
   loading: { color: '#3f51b5' },
   build: {
@@ -45,6 +48,7 @@ module.exports = {
   ],
   vendor: [
     'firebase',
-    'vuetify'
+    'vuetify',
+    'axios'
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-firebase-auth",
+  "name": "ajira-data-collect",
   "version": "0.0.1",
   "description": "Nuxt.js with Firebase Auth project",
   "author": "David Royer <droyer01@gmail.com>",
@@ -14,9 +14,10 @@
     "fdeploy": "yarn build && firebase deploy"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^1.0.2",
+    "@nuxtjs/pwa": "^2.0.8",
+    "axios": "^0.18.0",
     "firebase": "4.5.0",
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "^1.4.1",
     "vuetify": "^0.15.7"
   },
   "devDependencies": {

@@ -111,7 +111,7 @@ export default {
 
 <style>
   .container.fluid {
-    background-color: #E57373 !important;
+    background-color: #E74C3C !important;
   }
 
 .navigation-drawer>.list:not(.list--dense) .list__tile {
@@ -137,7 +137,7 @@ a.nuxt-link-exact-active.list__tile--active.list__tile.list__tile--link {
 }
 
 .application .theme--dark.toolbar {
-  background-color: #F44336;
+  background-color: #E74C3C;
   color: #fff;
 }
 

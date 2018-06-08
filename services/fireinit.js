@@ -3,12 +3,12 @@ import 'firebase/auth'
 import 'firebase/database'
 
 var config = {
-  apiKey: "AIzaSyAzdoAjlM9YlQ-gl8VRayCxtJbnrl9qDsw",
-  authDomain: "nuxt-firebase-auth.firebaseapp.com",
-  databaseURL: "https://nuxt-firebase-auth.firebaseio.com",
-  projectId: "nuxt-firebase-auth",
-  storageBucket: "nuxt-firebase-auth.appspot.com",
-  messagingSenderId: "316484287956"
+  apiKey: "AIzaSyC5MMifxu7hyfmdu8g4NJjeVNYlesP39_U",
+  authDomain: "ajira-dfff4.firebaseapp.com",
+  databaseURL: "https://ajira-dfff4.firebaseio.com",
+  projectId: "ajira-dfff4",
+  storageBucket: "ajira-dfff4.appspot.com",
+  messagingSenderId: "255333306714"
 };
 
 !firebase.apps.length ? firebase.initializeApp(config) : ''

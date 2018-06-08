@@ -5,18 +5,20 @@
         <div class="wrapper">
           <div v-if="!$store.state.user">
             <login-form></login-form>
-            <!-- <v-btn outline large flat nuxt @click="$router.push('/login')" primary>Sign In</v-btn> -->
+             <!--<v-btn outline large flat nuxt @click="$router.push('/login')" primary>Sign In</v-btn>-->
           </div>
-          <div v-else class="flexWrapper">
-            <h4 class="blue--text">Welcome to the GIS Data Collector</h4>
+          <div v-else >
+            <div>
+              <h4 class="black--text">Welcome to the Ajira GIS Data Collector</h4>
+            </div>
             <!--<v-btn icon class="blue white&#45;&#45;text">-->
               <!--<v-icon>thumb_up</v-icon>-->
             <!--</v-btn>-->
+            <div>
+              <nuxt-link to="/collect">Start Collecting</nuxt-link>
+            </div>
           </div>
           <br/>
-          <div>
-            <nuxt-link to="/collect">Start Collecting</nuxt-link>
-          </div>
         </div>
       </v-flex>
     </v-layout>
