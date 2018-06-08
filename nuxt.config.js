@@ -2,8 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: 'spa',
   head: {
-    title: 'My Itunes Search Program',
+    title: 'Ajira GIS Data Collector',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -14,7 +15,9 @@ module.exports = {
       { rel:"stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-
+  router: {
+    middleware: 'router-auth'
+  },
   /*
   ** Plugins
   */
@@ -29,7 +32,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['axios', 'vuetify'],
+    vendor: ['axios', 'vuetify', 'firebase'],
     /*
     ** Run ESLint on save
     */
