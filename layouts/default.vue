@@ -23,7 +23,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed>
+    <v-toolbar app fixed dark color="primary">
       <v-btn
         icon
         @click.native.stop="drawer = !drawer">
@@ -110,6 +110,10 @@ export default {
 </script>
 
 <style>
+  .container.fluid {
+    background-color: #E57373 !important;
+  }
+
 .navigation-drawer>.list:not(.list--dense) .list__tile {
   font-size: 17px;
 }
@@ -130,6 +134,11 @@ a.nuxt-link-exact-active.list__tile--active.list__tile.list__tile--link {
 .list__tile--link.list__tile--active {
   color: rgba(0,0,0,.87);
   border-left: 10px solid gray;
+}
+
+.application .theme--dark.toolbar {
+  background-color: #F44336;
+  color: #fff;
 }
 
 

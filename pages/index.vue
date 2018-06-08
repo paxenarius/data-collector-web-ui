@@ -13,6 +13,10 @@
               <!--<v-icon>thumb_up</v-icon>-->
             <!--</v-btn>-->
           </div>
+          <br/>
+          <div>
+            <nuxt-link to="/collect">Start Collecting</nuxt-link>
+          </div>
         </div>
       </v-flex>
     </v-layout>

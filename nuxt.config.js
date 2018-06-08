@@ -40,8 +40,8 @@ module.exports = {
     '~/plugins/fireauth.js'
   ],
   css: [
-    { src: '~/assets/css/main.css', lang: 'css'},
-    { src: '~/assets/css/app.styl', lang: 'styl'}
+    { src: '~/assets/css/main.css', lang: 'css' },
+    { src: '~/assets/css/app.styl', lang: 'styl' }
   ],
   vendor: [
     'firebase',
