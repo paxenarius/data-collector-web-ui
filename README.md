@@ -1,24 +1,11 @@
-# ajiragis-web-ui
+# Nuxt.js Firebase Auth - SSR Version
 
-> Nuxt.js project
+This is an example of using Nuxt.js in SPA mode with Firebase Authentication
 
-## Build Setup
+[Live Demo](https://nuxt-firebase-auth.firebaseapp.com)
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+[Blog Article - Part 1 - Overview](https://www.davidroyer.me/blog/nuxtjs-firebase-auth)
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+![alt text](/nuxt-firebase-authentication.jpg "Screenshot")
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-=======
-
+**More Info Soon...**

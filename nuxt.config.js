@@ -1,10 +1,6 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
-  mode: 'spa',
   head: {
-    title: 'Ajira GIS Data Collector',
+    title: 'Nuxt Firebase Auth',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,39 +8,43 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:"stylesheet", href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
+  mode: 'spa',
+  loading: { color: '#3f51b5' },
+  build: {
+    extend (config, ctx) {
+      if (ctx.dev && ctx.isClient) {
+        // config.module.rules.push({
+        //   enforce: 'pre',
+        //   test: /\.(js|vue)$/,
+        //   loader: 'eslint-loader',
+        //   exclude: /(node_modules)/
+        // })
+      }
+    },
+    extractCSS: true,
+    analyze: {
+      analyzerMode: 'static'
+    }
+  },
+  modules: [
+    '@nuxtjs/pwa'
+  ],
   router: {
     middleware: 'router-auth'
   },
-  /*
-  ** Plugins
-  */
-  plugins: ['~plugins/vuetify.js'],
-  css: ['~assets/app.styl'],
-
-  /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
-  /*
-  ** Build configuration
-  */
-  build: {
-    vendor: ['axios', 'vuetify', 'firebase'],
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-/*      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }*/
-    }
-  }
+  plugins: [
+    {src: '~/plugins/vuetify.js'},
+    '~/plugins/fireauth.js'
+  ],
+  css: [
+    { src: '~/assets/css/main.css', lang: 'css'},
+    { src: '~/assets/css/app.styl', lang: 'styl'}
+  ],
+  vendor: [
+    'firebase',
+    'vuetify'
+  ]
 }
