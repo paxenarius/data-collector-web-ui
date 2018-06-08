@@ -8,10 +8,10 @@
             <!-- <v-btn outline large flat nuxt @click="$router.push('/login')" primary>Sign In</v-btn> -->
           </div>
           <div v-else class="flexWrapper">
-            <h4 class="blue--text">You're logged in!</h4>
-            <v-btn icon class="blue white--text">
-              <v-icon>thumb_up</v-icon>
-            </v-btn>
+            <h4 class="blue--text">Welcome to the GIS Data Collector</h4>
+            <!--<v-btn icon class="blue white&#45;&#45;text">-->
+              <!--<v-icon>thumb_up</v-icon>-->
+            <!--</v-btn>-->
           </div>
         </div>
       </v-flex>

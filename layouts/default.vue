@@ -86,10 +86,10 @@ export default {
       items: [
         { icon: 'home', title: 'Welcome', to: '/' },
         { icon: 'info', title: 'About', to: '/about' },
-        { icon: 'person', title: 'Admin', to: '/admin' },
+        { icon: 'person', title: 'Collect', to: '/collect' },
         // { icon: 'store', title: 'FireStore', to: '/firestore' }
       ],
-      title: 'Nuxt Firebase Auth',
+      title: 'Ajira Data Collector',
       menu: false
     }
   },
