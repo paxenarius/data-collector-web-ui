@@ -6,10 +6,10 @@
       <p class="title">Test Me </p>
       <ul>
         <li>
-          Admin:  <nuxt-link to="/admin">/admin</nuxt-link>
+          Admin:  <nuxt-link to="/collect">/admin</nuxt-link>
         </li>
         <li>
-          Admin Subroute:  <nuxt-link to="/admin/settings">/admin/settings</nuxt-link>
+          Admin Subroute:  <nuxt-link to="/collect/settings">/admin/settings</nuxt-link>
         </li>
       </ul>
     </div>
