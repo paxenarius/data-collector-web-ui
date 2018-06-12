@@ -1,18 +1,21 @@
 <template>
-  <v-app>
+  <v-app dark class="red lighten-1">
     <v-navigation-drawer
-      persistent
+      :mini-variant.sync="miniVariant"
+      :clipped="clipped"
+      v-model="drawer"
+      fixed
       app
-      enableResizeWatcher
-      v-model="drawer">
+      class="red darken-1"
+      v-if="user"
+    >
       <v-list>
         <v-list-tile
           router
-          nuxt
-          exact
-          v-for="(item, i) in items"
-          :key="i"
           :to="item.to"
+          :key="i"
+          v-for="(item, i) in items"
+          exact
         >
           <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
@@ -23,54 +26,55 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app fixed dark color="primary">
-      <v-btn
-        icon
-        @click.native.stop="drawer = !drawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
-
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+    <v-toolbar
+            fixed
+            app
+            :clipped-left="clipped"
+            class="red darken-1"
+           >
+      <v-toolbar-side-icon
+              @click="drawer = !drawer"  v-if="user">
+      </v-toolbar-side-icon>
+      <img class="logo" src="@/static/logo.png" alt="logo"/>
       <v-spacer></v-spacer>
       <div v-if="user" id="user" class="text-xs-center">
-            <v-menu
-              offset-x
-              :close-on-content-click="false"
-              :nudge-top="200"
-              v-model="menu">
-              <v-btn icon slot="activator"><v-icon medium>settings</v-icon></v-btn>
-                <v-card>
-                  <v-list>
-                    <v-list-tile avatar>
-                      <v-list-tile-avatar>
-                        <img :src="$store.state.user.photoURL" alt="John">
-                      </v-list-tile-avatar>
-                      <v-list-tile-content>
-                        <v-list-tile-title v-if="user.displayName">{{user.displayName}}</v-list-tile-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                    <v-divider></v-divider>
+        <v-menu
+                offset-x
+                :close-on-content-click="false"
+                :nudge-top="200"
+                v-model="menu">
+          <v-btn icon slot="activator"><v-icon medium>more_vert</v-icon></v-btn>
+          <v-card dark color="red darken-1">
+            <v-list>
+              <v-list-tile avatar>
+                <v-list-tile-avatar>
+                  <img :src="$store.state.user.photoURL" alt="John">
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                  <v-list-tile-title v-if="user.displayName">{{user.displayName}}</v-list-tile-title>
+                </v-list-tile-content>
+              </v-list-tile>
+              <v-divider></v-divider>
 
-                    <v-list-tile>
-                      <v-spacer></v-spacer>
-                      <v-list-tile-action>
-                        <v-btn primary class="mt-2" color="primary" @click.native="logout">
-                          Logout
-                        </v-btn>
-                      </v-list-tile-action>
-                    </v-list-tile>
-                  </v-list>
-                </v-card>
-            </v-menu>
+              <v-list-tile>
+                <v-spacer></v-spacer>
+                <v-list-tile-action>
+                  <v-btn primary class="mt-2" color="red darken-2" @click.native="logout">
+                    Logout
+                  </v-btn>
+                </v-list-tile-action>
+              </v-list-tile>
+            </v-list>
+          </v-card>
+        </v-menu>
 
       </div>
-
     </v-toolbar>
-    <main>
-     <v-container fluid>
-       <nuxt />
-     </v-container>
-   </main>
+    <v-content>
+      <v-container fluid>
+        <nuxt />
+      </v-container>
+    </v-content>
     <v-footer :fixed="fixed" app>
       <span>&copy; 2017</span>
     </v-footer>
@@ -78,68 +82,41 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      drawer: true,
-      fixed: false,
-      items: [
-        { icon: 'home', title: 'Welcome', to: '/' },
-        { icon: 'info', title: 'About', to: '/about' },
-        { icon: 'person', title: 'Collect', to: '/collect' },
-        // { icon: 'store', title: 'FireStore', to: '/firestore' }
-      ],
-      title: 'Ajira Data Collector',
-      menu: false
-    }
-  },
-  computed: {
-    user () {
-      return this.$store.getters.activeUser
-    }
-  },
-  methods: {
-    logout () {
-      this.$store.dispatch('signOut').then(() => {
-        alert('logged out!')
-        this.$router.push('/')
-      })
+  export default {
+    data () {
+      return {
+        clipped: true,
+        drawer: true,
+        fixed: false,
+        items: [
+          { icon: 'apps', title: 'Welcome', to: '/' }
+          // { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+        ],
+        miniVariant: false,
+        right: true,
+        rightDrawer: false,
+        title: 'Vuetify.js',
+        menu: false
+      }
+    },
+    computed: {
+      user () {
+        return this.$store.getters.activeUser
+      }
+    },
+    methods: {
+      logout () {
+        this.$store.dispatch('signOut').then(() => {
+          this.$router.push('/')
+        })
+      }
     }
   }
- }
 </script>
 
+
 <style>
-  .container.fluid {
-    background-color: #E74C3C !important;
+  .logo {
+    width: 100px;
   }
-
-.navigation-drawer>.list:not(.list--dense) .list__tile {
-  font-size: 17px;
-}
-.avatar {
-  max-width: 75px;
-}
-
-.list__tile--active.list__tile.list__tile--link {
-
-}
-a.nuxt-link-exact-active.list__tile--active.list__tile.list__tile--link {
-  font-weight: 900 !important;
-  color: #3f51b5 !important;
-}
-.list__tile--link {
-  border-left: 10px solid transparent;
-}
-.list__tile--link.list__tile--active {
-  color: rgba(0,0,0,.87);
-  border-left: 10px solid gray;
-}
-
-.application .theme--dark.toolbar {
-  background-color: #E74C3C;
-  color: #fff;
-}
-
-
 </style>

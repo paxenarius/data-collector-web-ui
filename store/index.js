@@ -23,8 +23,10 @@ const createStore = () => {
 
       signInWithGoogle ({commit}) {
         return new Promise((resolve, reject) => {
-          auth.signInWithRedirect(GoogleProvider)
-          resolve()
+          // auth.signInWithRedirect(GoogleProvider)
+          auth.signInWithPopup(GoogleProvider).then(function (result) {
+            resolve()
+          })
         })
       },
 
