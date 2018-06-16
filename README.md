@@ -1,4 +1,4 @@
-# ajira-data-collector
+# data-collector-web-ui
 
 > Nuxt.js + Vuetify.js project
 
