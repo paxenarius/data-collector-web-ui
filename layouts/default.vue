@@ -1,5 +1,5 @@
 <template>
-  <v-app dark class="red lighten-1">
+  <v-app dark class="red darken-1">
     <v-navigation-drawer
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
