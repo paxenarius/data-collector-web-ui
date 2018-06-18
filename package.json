@@ -8,12 +8,25 @@
     "dev": "HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "test": "ava --serial --verbose"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.1.1",
+    "ava": "^0.25.0",
     "axios": "^0.18.0",
     "firebase": "4.5.0",
+    "jsdom": "^11.11.0",
     "nuxt": "^1.0.0",
     "vuetify": "^1.0.0"
   },
