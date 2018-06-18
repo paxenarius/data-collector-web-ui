@@ -5,16 +5,17 @@
   "author": "jamesmwangi55 <jamesmwangi55@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "HOST=0.0.0.0 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^1.0.0",
-    "vuetify": "^1.0.0",
+    "@nuxtjs/dotenv": "^1.1.1",
     "axios": "^0.18.0",
-    "firebase": "4.5.0"
+    "firebase": "4.5.0",
+    "nuxt": "^1.0.0",
+    "vuetify": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

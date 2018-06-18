@@ -1,0 +1,6 @@
+.idea/
+.git/
+.gitignore
+.nuxt/
+dist/
+node_modules/

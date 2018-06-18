@@ -15,7 +15,7 @@ import {
   VDivider,
   VForm,
   VSelect,
-  vTextField,
+  VTextField,
   VDialog
 } from 'vuetify'
 
@@ -44,7 +44,7 @@ Vue.use(Vuetify, {
     VDivider,
     VForm,
     VSelect,
-    vTextField,
+    VTextField,
     VDialog
   }
 })

@@ -74,7 +74,7 @@
     import LoginForm from '~/components/LoginForm'
     export default {
       asyncData ({params}) {
-        return axios.get('http://146.185.131.213/api/v1/languages/')
+        return axios.get(`${process.env.API}/api/v1/languages/`)
           .then((res) => {
             console.log(res)
             return {languages: res.data}
@@ -146,7 +146,7 @@
                   Make the request to the POST /select-files URL
                 */
           var mine = this
-          axios.post('http://146.185.131.213/api/v1/contributions/',
+          axios.post(`${process.env.API}/api/v1/contributions/`,
             formData,
             {
               headers: {
