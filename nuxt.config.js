@@ -1,8 +1,12 @@
 
 const nodeExternals = require('webpack-node-externals')
 const resolve = (dir) => require('path').join(__dirname, dir)
+require('dotenv').config()
 
 module.exports = {
+  env: {
+    API: process.env.ROOT_API || '/undefined-api'
+  },
   /*
   ** Headers of the page
   */
@@ -56,7 +60,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
       // if (ctx.isDev && ctx.isClient) {
       //   config.module.rules.push({
       //     enforce: 'pre',

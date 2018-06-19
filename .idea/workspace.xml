@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="580290a3-3047-4562-bd37-239fdf1c4847" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/index.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/vuetify.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,11 +47,22 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+            <state relative-caret-position="-1965">
+              <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="e#2277#2302#0" expanded="true" />
+                <element signature="e#2930#2955#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -51,8 +71,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="352">
-                <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <first_editor relative-caret-position="1008">
+                <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
               </first_editor>
               <second_editor />
             </state>
@@ -185,18 +205,18 @@
       <workItem from="1529309822110" duration="6000" />
       <workItem from="1529344872461" duration="1951000" />
       <workItem from="1529407264997" duration="599000" />
-      <workItem from="1529435698841" duration="324000" />
+      <workItem from="1529435698841" duration="661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16562000" />
+    <option name="totallyTimeSpent" value="16899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="702" y="-1440" width="1037" height="1158" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28343314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28343314" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -204,7 +224,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.13715953" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20233463" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -236,6 +256,8 @@
           <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -270,6 +292,8 @@
           <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -321,6 +345,8 @@
           <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -355,6 +381,8 @@
           <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -389,6 +417,8 @@
           <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -413,6 +443,8 @@
           <caret line="125" column="11" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -440,6 +472,8 @@
           <caret line="125" column="11" lean-forward="true" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -474,6 +508,8 @@
           <caret line="125" column="11" lean-forward="true" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -519,8 +555,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="352">
-            <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <first_editor relative-caret-position="1008">
+            <caret line="63" column="74" selection-start-line="63" selection-start-column="74" selection-end-line="63" selection-end-column="74" />
           </first_editor>
           <second_editor />
         </state>
@@ -533,12 +569,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+        <state relative-caret-position="-1965">
+          <caret line="91" column="22" lean-forward="true" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2277#2302#0" expanded="true" />
+            <element signature="e#2930#2955#0" expanded="true" />
           </folding>
         </state>
       </provider>
