@@ -120,14 +120,14 @@
             this.alert = true
             return
           }
-          if (this.text == null) {
-            this.alert = true
-            return
-          }
-          if (!this.files[0]) {
-            this.alert = true
-            return
-          }
+          // if (this.text == null) {
+          //   this.alert = true
+          //   return
+          // }
+          // if (!this.files[0]) {
+          //   this.alert = true
+          //   return
+          // }
 
           formData.append('user', 1)
           formData.append('language', this.language.id)
